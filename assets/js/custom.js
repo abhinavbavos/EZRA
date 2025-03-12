@@ -193,9 +193,9 @@ jQuery(function ($) {
 	};
 
 	// Preloader JS
-	jQuery(window).on('load',function(){
-		jQuery(".loader").fadeOut(500);
-	});
+	// jQuery(window).on('load',function(){
+	// 	jQuery(".loader").fadeOut(500);
+	// });
 
 	// Back to Top JS 
 	$('body').append('<div id="toTop" class="back-to-top-btn"><i class="bx bx-up-arrow"></i></div>');
@@ -232,12 +232,12 @@ function toggleTheme() {
 }
 
 // Immediately invoked function to set the theme on initial load
-(function () {
-    if (localStorage.getItem('audeck_theme') === 'theme-dark') {
-        setTheme('theme-dark');
-        document.getElementById('slider').checked = false;
-    } else {
-        setTheme('theme-light');
-      document.getElementById('slider').checked = true;
-    }
-})();
+// (function () {
+//     if (localStorage.getItem('audeck_theme') === 'theme-dark') {
+//         setTheme('theme-dark');
+//         document.getElementById('slider').checked = false;
+//     } else {
+//         setTheme('theme-light');
+//       document.getElementById('slider').checked = true;
+//     }
+// })();
