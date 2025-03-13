@@ -416,7 +416,7 @@ button:focus {
 
 .section-title .sub-title {
   font-weight: 500;
-  color: #ffffff;
+  color: #07224d;
   text-transform: uppercase;
   position: relative;
   display: block;
@@ -429,27 +429,29 @@ button:focus {
   font-size: 36px;
   font-weight: 600;
   margin-top: 10px;
+  color: #07224d;
 }
 
 .about-area .about-item {
   display: flex;
-  align-items: stretch; /* Ensure both columns are the same height */
+  flex-direction: column;
   margin-bottom: 30px;
 }
 
 .about-area .about-item .about-img {
-  flex: 1; /* Take up 50% of the width */
+  flex: 1;
 }
 
 .about-area .about-item .about-text {
-  flex: 1; /* Take up the other 50% of the width */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center text */
+  justify-content: center;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin-top: 20px;
 }
 
 .about-area .about-item img {
@@ -468,6 +470,29 @@ button:focus {
   font-size: 16px;
   color: #6c757d;
   line-height: 1.6;
+}
+
+.about-area .about-item:hover .about-text {
+  transform: translateY(-10px); /* Adds subtle hover effect */
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .about-area .section-title h2 {
+    font-size: 28px;
+  }
+
+  .about-area .about-item {
+    margin-bottom: 20px;
+  }
+
+  .about-area .about-text h3 {
+    font-size: 22px;
+  }
+
+  .about-area .about-text p {
+    font-size: 14px;
+  }
 }
 
 /*-- End About us --*/

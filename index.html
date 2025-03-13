@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
     <!-- Boxicons CSS -->
     <link rel="stylesheet" href="assets/css/boxicons.min.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"/>
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
@@ -28,24 +25,25 @@
     <!-- Theme Dark CSS -->
     <link rel="stylesheet" href="assets/css/theme-dark.css" />
     <!-- Bootstrap CSS -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Fancybox CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-    />
-    
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+    <!-- Email JS -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "t3l7L2pD2iX_LiZfq",
+  });
+})();
+</script>
     <title>EZRA The Ultimate</title>
 
     <link rel="icon" type="image/png" href="assets/img/home-one/ezra_b.png" />
+
   </head>
   <body>
     <!-- Preloader -->
@@ -194,7 +192,7 @@
     <!-- End Address -->
 
     <!-- About Section -->
-    <section id="about" class="about-area ptb-100" id="about">
+    <section id="about" class="about-area ptb-100">
       <div class="container">
         <div class="section-title text-center">
           <span class="sub-title">about us</span>
@@ -207,49 +205,42 @@
             vehicle into a mobile masterpiece.
           </p>
         </div>
+    
         <div class="row justify-content-center">
           <!-- Experience and Expertise -->
           <div class="col-lg-6">
-            <div class="about-item d-flex">
+            <div class="about-item d-flex flex-column">
               <div class="about-img">
-                <img
-                  src="assets/img/home-one/about-1.jpeg"
-                  alt="About Image"
-                  class="img-fluid"
-                />
+                <img src="assets/img/home-one/about-1.jpeg" alt="Experience and Expertise" class="img-fluid" />
               </div>
               <div class="about-text">
                 <h3>Experience and Expertise</h3>
                 <p>
-                  Our team of expert engineers and designers bring decades of
-                  experience to every project. We work closely with our clients
-                  to deliver tailored solutions that perfectly match their needs
-                  and preferences.We offer a wide range of services to transform
+                  Our team of expert engineers and designers brings decades of
+                  experience to every project. We work closely with our clients to
+                  deliver tailored solutions that perfectly match their needs
+                  and preferences. We offer a wide range of services to transform
                   your vehicle into the ultimate travel companion.
                 </p>
               </div>
             </div>
           </div>
-
+    
           <!-- Our Vision -->
           <div class="col-lg-6">
-            <div class="about-item d-flex">
+            <div class="about-item d-flex flex-column">
               <div class="about-img">
-                <img
-                  src="assets/img/home-one/about-2.jpeg"
-                  alt="About Image"
-                  class="img-fluid"
-                />
+                <img src="assets/img/home-one/about-2.jpeg" alt="Our Vision" class="img-fluid" />
               </div>
               <div class="about-text">
                 <h3>Our Vision</h3>
                 <p>
                   Our vision is to redefine the travel experience by providing
                   customized vehicle solutions that are both functional and
-                  luxurious. We believe that every vehicle should be a
-                  reflection of its owner’s personality, and we strive to create
-                  modifications that bring out the best in every design. An
-                  ultimate experience you can expect from our side.
+                  luxurious. We believe that every vehicle should be a reflection
+                  of its owner’s personality, and we strive to create modifications
+                  that bring out the best in every design. An ultimate experience
+                  you can expect from our side.
                 </p>
               </div>
             </div>
@@ -257,6 +248,7 @@
         </div>
       </div>
     </section>
+    
     <!-- End About Section -->
 
     <!-- Process -->
@@ -905,13 +897,9 @@
               </a>
             </div>
           </div>
-
-          
-          <!-- Additional image and video items go here... -->
         </div>
       </div>
     </section>
-
     <!-- End Work -->
 
     <!-- Contact us -->
@@ -926,12 +914,11 @@
             via WhatsApp for a quicker response.
           </p>
         </div>
-
         <div class="row justify-content-center">
           <!-- Enquiry Form -->
           <div class="col-lg-6">
             <div class="contact-form">
-              <form action="your_form_submission_script.php" method="POST">
+              <form id="contact-form">
                 <div class="form-group">
                   <input
                     type="text"
@@ -966,6 +953,7 @@
               </form>
             </div>
           </div>
+          
 
           <!-- WhatsApp Section with Image -->
           <div class="col-lg-6">
@@ -1371,6 +1359,48 @@
     });
   });
     </script>
+
+    <!-- Email JS -->
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize EmailJS
+    emailjs.init("r28uZv866nupniblv");
+
+    // Get the form element
+    const form = document.getElementById("contact-form");
+
+    // Add event listener to form submit
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get form data
+      const formData = new FormData(form);
+      
+      // Create an object for the data
+      const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      };
+
+      // Send email using EmailJS
+      emailjs.send("service_y88an5d", "template_3lw4uz2", data) // Replace with your Service ID and Template ID
+        .then(
+          function (response) {
+            console.log("SUCCESS", response);
+            alert("Your message has been sent successfully!");
+            form.reset(); // Clear the form after successful submission
+          },
+          function (error) {
+            console.log("FAILED", error);
+            alert("Something went wrong, please try again.");
+          }
+        );
+    });
+  });
+</script>
+
     
     
 
@@ -1401,10 +1431,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <!-- Include jQuery (ensure it's loaded before Fancybox) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include Fancybox CSS -->
         <!-- Include Fancybox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mixitup@3.3.1/dist/mixitup.min.js"></script>
+    
 
   </body>
 </html>
