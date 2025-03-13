@@ -1165,7 +1165,6 @@
           </div>
           <h2>Find Us & Get In Touch</h2>
           <div class="row">
-            <!-- Location Information -->
             <div class="col-lg-6">
               <div class="contact-info-item">
                 <h3><i class="bx bx-location-plus"></i> Our Location</h3>
@@ -1175,8 +1174,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- Mobile Number Information -->
             <div class="col-lg-6">
               <div class="contact-info-item">
                 <h3><i class="bx bx-phone-call"></i> Contact Us</h3>
@@ -1204,46 +1201,32 @@
                 </p>
                 <ul>
                   <li>
-                    <a href="https://www.youtube.com/" target="_blank"
+                    <a href="https://youtube.com/@ezra4762?si=77fhuihPNZcdj7cf" target="_blank"
                       ><i class="bx bxl-youtube"></i
                     ></a>
                   </li>
                   <li>
-                    <a href="https://www.facebook.com/login/" target="_blank"
+                    <a href="https://www.facebook.com/profile.php?id=61572205093524" target="_blank"
                       ><i class="bx bxl-facebook"></i
                     ></a>
                   </li>
                   <li>
                     <a
-                      href="https://www.instagram.com/accounts/login/"
+                      href="https://www.instagram.com/ezratheultimate?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                       target="_blank"
                       ><i class="bx bxl-instagram-alt"></i
                     ></a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/i/flow/login" target="_blank"
-                      ><i class="bx bxl-twitter"></i
+                    <a href="https:wa.me/918289995599" target="_blank"
+                      ><i class="bx bxl-whatsapp"></i
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <!-- <div class="col-sm-6 col-lg-3">
-            <div class="footer-item">
-              <div class="footer-service">
-                <h3>Quick Links</h3>
-                <ul>
-                  <li><a href="index.html"><i class="bx bx-chevron-right"></i> Home</a></li>
-                  <li><a href="#about"><i class="bx bx-chevron-right"></i> About</a></li>
-                  <li><a href="#services"><i class="bx bx-chevron-right"></i> Services</a></li>
-                  <li><a href="#gallery"><i class="bx bx-chevron-right"></i> Gallery</a></li>
-                  <li><a href="#contact"><i class="bx bx-chevron-right"></i> Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
-          <div class="col-sm-6 col-lg-3">
+                    <div class="col-sm-6 col-lg-3">
             <div class="footer-item">
               <div class="footer-service footer-find">
                 <h3>Find Us</h3>
@@ -1295,7 +1278,7 @@
             <div class="col-lg-12">
               <div class="copyright-item">
                 <p>
-                  © <span id="year"></span> EZRA The Ultimate is Designed by
+                  © <span id="year"></span> 'EZRA-The Ultimate' is Designed & Developed by
                   <a href="https://agrowtein.com/" target="_blank">Agrowtein</a>
                 </p>
               </div>
@@ -1309,55 +1292,10 @@
 
     <!-- Essential JS -->
 
-    <!-- Autoplay Off -->
+    <!-- Footer -->
+
     <script>
-      $(document).ready(function() {
-    // Initialize MixItUp for sorting
-    var mixer = mixitup('#Container');
-
-    // Sorting Menu Event
-    $('.sorting-menu ul li').click(function() {
-      $('.sorting-menu ul li').removeClass('active');
-      $(this).addClass('active');
-    });
-
-    // Pause all videos when page loads
-    $('video').each(function() {
-      this.pause();
-      this.currentTime = 0;
-    });
-
-    // Pause all videos when opening Fancybox (ensures no video plays in the background)
-    $(document).on('click', 'a[data-fancybox="gallery"]', function() {
-      $('video').each(function() {
-        this.pause();  // Pause all videos
-        this.currentTime = 0;  // Reset to the start
-      });
-    });
-
-    // Pause all videos when closing the Fancybox modal
-    $(document).on('beforeClose.fb', function() {
-      $('video').each(function() {
-        this.pause();  // Pause the video
-        this.currentTime = 0;  // Reset to the start
-      });
-    });
-
-    // Ensure only the current video plays inside Fancybox
-    $(document).on('afterShow.fb', function(event, instance, slide) {
-      // Pause all videos first
-      $('video').each(function() {
-        this.pause();
-        this.currentTime = 0;
-      });
-
-      // Play the video that is currently in the Fancybox
-      var videoElement = slide.$content.find('video')[0];
-      if (videoElement) {
-        videoElement.play();
-      }
-    });
-  });
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
     <!-- Email JS -->
