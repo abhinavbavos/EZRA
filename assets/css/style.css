@@ -111,11 +111,24 @@ button:focus {
 }
 
 .site-title {
-  font-size: 18px; /* Adjust font size for mobile */
-  margin-left: 10px;
-  font-weight: bold;
-  color: #07224d; /* Title color */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
+
+.ezra {
+  font-size: 2rem; /* Adjust the size as needed */
+  font-weight: bold;
+  color: #0a2b53;
+}
+
+.ultimate {
+  font-size: .7rem; /* Adjust the size as needed */
+  align-self: flex-start;
+  color: #0a2b53;
+}
+
 
 .main-nav {
   background: #ffffff;
